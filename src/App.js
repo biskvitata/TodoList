@@ -52,7 +52,7 @@ class App extends React.Component {
   // }
 
   removeToDo = (id) => {
-    this.setState({todolist: [...this.state.todolist.filter(item => item.id !== id)]})
+    this.setState({todolist: [...this.state.todolist.filter(item => item.id !== id)]});
   }
 
   changeToDoStatus = (id) => {
@@ -70,7 +70,7 @@ class App extends React.Component {
       title,
       inProgress: true
     }
-    this.setState({ todolist: [...this.state.todolist, listItem]})
+    this.setState({ todolist: [...this.state.todolist, listItem]});
   }
 
   render() {

@@ -10,11 +10,11 @@ export class Todocreate extends React.Component {
 
   updateTitle = (e) => {
     if (e.target.value.length === 0) {
-      this.setState({ error : 'Title is too short.' })
+      this.setState({ error : 'Title is too short.' });
     } else {
-      this.setState({ error : '' })
+      this.setState({ error : '' });
     }
-    this.setState({ title: e.target.value })
+    this.setState({ title: e.target.value });
   }
 
   createTodo = (e) => {
@@ -22,9 +22,9 @@ export class Todocreate extends React.Component {
 
     if (this.state.title) {
       this.props.createTodo(this.state.title);
-      this.setState({ title : '' })
+      this.setState({ title : '' });
     } else {
-      this.setState({ error : 'Title must be entered before adding the item.' })
+      this.setState({ error : 'Title must be entered before adding the item.' });
     }    
   }
 
@@ -75,7 +75,7 @@ const formStyling = {
 }
 
 Todocreate.propTypes = {
-  createTodo: PropTypes.func.isRequired,
+  createTodo: PropTypes.func.isRequired
 }
 
 export default Todocreate;

@@ -8,24 +8,22 @@ const Todoitem = (props) => {
   const { id, title, inProgress } = todoitem;
 
   return (
-    <>
-      <div style={stylingFunction(inProgress)}>
-        <div>
-          <Checkbox
-            checked={!inProgress}
-            onChange={changeToDoStatus.bind(this, id)}
-            style={checkboxStyling}
-          />
-
-          {title}
-        </div>
-
-        <DeleteIcon
-          onClick={removeToDo.bind(this, id)}
-          style={iconStyling}
+    <div style={stylingFunction(inProgress)}>
+      <div>
+        <Checkbox
+          checked={!inProgress}
+          onChange={changeToDoStatus.bind(this, id)}
+          style={checkboxStyling}
         />
+
+        {title}
       </div>
-    </>
+
+      <DeleteIcon
+        onClick={removeToDo.bind(this, id)}
+        style={iconStyling}
+      />
+    </div>
   );
 }
 
